@@ -8,6 +8,9 @@ import Button from '@material-ui/core/Button';
 import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
 import { withStyles } from '@material-ui/core/styles';
+import {BrowserRouter as Router} from 'react-router-dom';
+import Route from 'react-router-dom/Route';
+
 
 const styles = theme => ({
   root: {
@@ -32,6 +35,7 @@ function TheGrid(props) {
 
 
   return(
+    <Router>
     <Grid
     container
     spacing={24}
@@ -50,12 +54,15 @@ function TheGrid(props) {
       <Button variant="contained" color="primary">
         Iniciar sesión
       </Button>
+
       <Button variant="contained" color="secondary">
         Regístrate
       </Button>
+
     </Grid>
 
     </Grid>
+    </Router>
   );
 
 }
