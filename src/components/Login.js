@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import FormControl from '@material-ui/core/FormControl';
-import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
 import { withStyles } from '@material-ui/core/styles';
 
@@ -38,6 +35,7 @@ class Login extends Component{
           id="Pswd"
           label="Password"
           margin="normal"
+          type="password"
         />
         </Grid>
         </div>

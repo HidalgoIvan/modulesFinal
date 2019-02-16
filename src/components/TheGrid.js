@@ -1,17 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Login from './Login';
-import FormControl from '@material-ui/core/FormControl';
 import Button from '@material-ui/core/Button';
-import MenuItem from '@material-ui/core/MenuItem';
-import TextField from '@material-ui/core/TextField';
 import { withStyles } from '@material-ui/core/styles';
-import {BrowserRouter as Router} from 'react-router-dom';
-import Route from 'react-router-dom/Route';
-
-
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import CreateAccount from './CreateAccount';
 const styles = theme => ({
   root: {
     flexGrow: 1,
@@ -30,39 +24,32 @@ const styles = theme => ({
    display: 'none',
  },
 });
-
+function redirectTo(){
+   this.props.history.push("/register");
+}
 function TheGrid(props) {
 
 
   return(
-    <Router>
-    <Grid
-    container
-    spacing={24}
-    alignItems="center"
-    justify="center"
-    direction="column"
-    style={{ minHeight: '100vh' }} >
-    <Grid item xs={2}>
-      <h1>Log In</h1>
-    </Grid>
+      <Grid container spacing={24} alignItems="center" justify="center" direction="column"  >
+        <Grid item xs={12}>
+          <h1>Log In</h1>
+        </Grid>
 
-    <Grid item xs={12}>
-      <Login/>
-    </Grid>
-    <Grid item xs={12}>
-      <Button variant="contained" color="primary">
-        Iniciar sesión
-      </Button>
-
-      <Button variant="contained" color="secondary">
-        Regístrate
-      </Button>
-
-    </Grid>
-
-    </Grid>
-    </Router>
+        <Grid item xs={12}>
+          <Login/>
+        </Grid>
+        <Grid item xs={12}>
+        <Button variant="contained" color="primary">
+          Iniciar sesión
+        </Button>
+        <Link to="/register">
+          <Button variant="contained" color="secondary">
+            Regístrate
+          </Button>
+        </Link>
+        </Grid>
+      </Grid>
   );
 
 }

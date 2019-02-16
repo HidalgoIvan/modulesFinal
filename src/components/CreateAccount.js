@@ -4,6 +4,7 @@ import TheButton from './TheButton';
 import Grid from '@material-ui/core/Grid';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const styles = theme => ({
   root: {
@@ -39,7 +40,9 @@ function CenteredGrid(props) {
           <InputField placeholder={'Dirección'}/>
           </Grid>
           <Grid item xs={12}>
+          <Link to="/">
           <TheButton color={'secondary'} label={'Cancelar'}/>
+          </Link>
           </Grid>
           <Grid item xs={12}>
           <TheButton color={'primary'} label={'Crear Usuario'}/>
