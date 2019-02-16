@@ -47,18 +47,12 @@ function TheGrid(props) {
       <Login/>
     </Grid>
     <Grid item xs={12}>
-    <Grid container>
-      <Grid item xs={6}>
       <Button variant="contained" color="primary">
         Iniciar sesión
       </Button>
-      </Grid>
-      <Grid item xs={6}>
       <Button variant="contained" color="secondary">
         Regístrate
       </Button>
-      </Grid>
-      </Grid>
     </Grid>
 
     </Grid>
